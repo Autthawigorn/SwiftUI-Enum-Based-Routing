@@ -106,40 +106,63 @@ struct PatientScreen: View {
 }
 
 // MARK: - 8. หน้า DoctorScreen
+import SwiftUI
+
 struct DoctorScreen: View {
+    @Environment(\.navigate) private var navigate
+
     var body: some View {
-        Text("Doctor Screen")
+        VStack {
+            // ปุ่มไปหน้า Doctor Detail
+            Button("Go to Doctor Detail Screen") {
+                navigate(.doctors(.detail(2)))
+            }
+
+            // ปุ่มไปหน้า Patient List
+            Button("Show Patient List Screen") {
+                navigate(.patients(.list))
+            }
+        }
+        .navigationTitle("Doctor Screen")
     }
 }
 
-// MARK: - 9. ContentView (หน้าหลักของแอป)
 
+// MARK: - 9. ContentView
 struct ContentView: View {
-    @State private var selectedTab: AppTab = .patients // เก็บว่าแท็บไหนถูกเลือกอยู่
+    @State private var selectedTab: AppTab = .patients
+    
+    // เก็บเส้นทาง (NavigationPath) ของแต่ละแท็บแยกกัน
+    // เช่น routes[.patients] กับ routes[.doctors]
     @State private var routes: [AppTab: NavigationPath] = [:]
     
+    // ฟังก์ชันช่วยสร้าง Binding สำหรับแต่ละแท็บ
+    // เพื่อให้ NavigationStack ของแต่ละแท็บใช้ path ของตัวเองได้
     private func binding(for tab: AppTab) -> Binding<NavigationPath> {
         Binding(
-            get: { routes[tab, default: NavigationPath()] },
-            set: { routes[tab] = $0 }
+            get: { routes[tab, default: NavigationPath()] }, // ถ้ายังไม่มี path ให้ใช้ค่าเริ่มต้นใหม่
+            set: { routes[tab] = $0 } // เวลา path มีการเปลี่ยน (push/pop) ให้บันทึกกลับเข้า dictionary
         )
     }
 
     var body: some View {
         TabView(selection: $selectedTab) {
             
-            // --------- แท็บคนไข้ ----------
+            // ---------- แท็บ Patients ----------
             Tab("Patients", systemImage: "heart", value: AppTab.patients) {
+                // ใช้ NavigationStack พร้อม path ของแท็บ Patients
                 NavigationStack(path: binding(for: .patients)) {
                     PatientScreen()
+                        // กำหนดปลายทางเมื่อเจอ Route (คือ view ที่จะ push ไป)
                         .navigationDestination(for: Route.self) { route in
                             route.destination
                         }
                 }
             }
             
-            // --------- แท็บหมอ ----------
+            // ---------- แท็บ Doctors ----------
             Tab("Doctors", systemImage: "cross", value: AppTab.doctors) {
+                // ใช้ NavigationStack พร้อม path ของแท็บ Doctors
                 NavigationStack(path: binding(for: .doctors)) {
                     DoctorScreen()
                         .navigationDestination(for: Route.self) { route in
@@ -148,15 +171,23 @@ struct ContentView: View {
                 }
             }
         }
-        // ส่ง NavigateAction เข้า environment ของทุก View
+        // MARK: - ส่ง NavigateAction เข้า Environment ของทุก View
         .environment(\.navigate, NavigateAction(action: { route in
+            // เมื่อ View ไหนเรียก navigate(...) มาที่นี่
+            // เช่น navigate(.patients(.list)) หรือ navigate(.doctors(.detail(2)))
+            
+            // ดึง path ของแท็บปัจจุบัน (เช่น patients หรือ doctors)
             var navigationPath = routes[selectedTab, default: NavigationPath()]
+            
+            // เพิ่ม route ลงใน path → NavigationStack จะ push หน้านั้น
             navigationPath.append(route)
+            
+            // บันทึก path ที่อัปเดตกลับเข้า dictionary
             routes[selectedTab] = navigationPath
-
         }))
     }
 }
+
 
 #Preview {
     ContentView()
