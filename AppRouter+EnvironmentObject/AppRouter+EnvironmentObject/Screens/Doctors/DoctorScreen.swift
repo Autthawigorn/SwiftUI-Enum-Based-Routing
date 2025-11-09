@@ -47,24 +47,3 @@ struct DoctorScreen: View {
 }
 
 
-// Supporting doctor views
-struct DoctorListView: View {
-    @EnvironmentObject private var router: AppRouter
-    var body: some View {
-        List(1...10, id: \.self) { i in
-            Button("Doctor \(i)") {
-                router.navigate(.doctors(.detail(id: i)))
-            }
-        }
-        .navigationTitle("Doctor List")
-    }
-}
-
-
-struct DoctorDetailView: View {
-    let doctorId: Int
-    var body: some View {
-        Text("Doctor Detail: \(doctorId)")
-            .navigationTitle("Doctor #\(doctorId)")
-    }
-}

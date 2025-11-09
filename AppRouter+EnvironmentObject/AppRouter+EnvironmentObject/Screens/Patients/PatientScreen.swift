@@ -32,26 +32,3 @@ struct PatientScreen: View {
     }
 }
 
-
-// Supporting views used by PatientRoutes
-struct PatientListView: View {
-    @EnvironmentObject private var router: AppRouter
-    var body: some View {
-        List(1...10, id: \.self) { i in
-
-            Button("Patient \(i)") {
-                router.navigate(.patients(.detail(id: i)))
-            }
-        }
-        .navigationTitle("Patient List")
-    }
-}
-
-
-struct PatientDetailView: View {
-    let patientId: Int
-    var body: some View {
-        Text("Patient Detail: \(patientId)")
-            .navigationTitle("Patient #\(patientId)")
-    }
-}
