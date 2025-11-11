@@ -18,23 +18,20 @@ struct ContentView: View {
         TabView(selection: $router.selectedTab) {
             NavigationStack(path: router.binding(for: .patients)) {
                 PatientScreen()
-//                    .navigationDestination(for: Routes.self) { $0.destination }
-                    .navigationDestination(for: Route.self) { newPath in
-                        return newPath.destination
-                    }
-            }
-            .tabItem { Label("Patients", systemImage: "heart.fill") }
-            .tag(AppTab.patients)
-            
-            
-            NavigationStack(path: router.binding(for: .doctors)) {
-                DoctorScreen()
-                    .navigationDestination(for: Route.self) { $0.destination }
-            }
-            .tabItem { Label("Doctors", systemImage: "cross.case.fill") }
-            .tag(AppTab.doctors)
+                .navigationDestination(for: Route.self) { $0.destination }
         }
+        .tabItem { Label("Patients", systemImage: "heart.fill") }
+        .tag(AppTab.patients)
+        
+        
+        NavigationStack(path: router.binding(for: .doctors)) {
+            DoctorScreen()
+                .navigationDestination(for: Route.self) { $0.destination }
+        }
+        .tabItem { Label("Doctors", systemImage: "cross.case.fill") }
+        .tag(AppTab.doctors)
     }
+}
 }
 #Preview {
     ContentView()
