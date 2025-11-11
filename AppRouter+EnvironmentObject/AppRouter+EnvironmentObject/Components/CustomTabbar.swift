@@ -15,8 +15,11 @@ struct CustomTabBar: View {
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
             ForEach(tabs, id: \.self) { tab in
-                tabItem(for: tab)
-            }
+                          TabItem(tab: tab, isSelected: router.selectedTab == tab) {
+                                router.selectedTab = tab
+                               // router.reset(in: tab)
+                            }
+                        }
         }
         .padding(.horizontal, 16)
         .padding(.bottom, 0)
@@ -29,31 +32,61 @@ struct CustomTabBar: View {
     }
 
     /// Tab Item View
-    @ViewBuilder
-    private func tabItem(for tab: AppTab) -> some View {
+//    private func tabItem(for tab: AppTab) -> some View {
+//        VStack(spacing: 8) {
+//            // Indicator bar
+//            Rectangle()
+//                .fill(router.selectedTab == tab ? Color(hex: "E5C48F") : .clear)
+//                .frame(height: 4)
+//                .animation(.easeInOut(duration: 0.25), value: router.selectedTab)
+//
+//            VStack(spacing: 0) {
+//                Image(systemName: tab.icon)
+//                    .font(.system(size: 18, weight: .medium))
+//                    .foregroundColor(router.selectedTab == tab ? Color(hex: "E5C48F") : .gray)
+//
+//                Text(tab.title)
+//                    .font(.caption)
+//                    .fontWeight(router.selectedTab == tab ? .semibold : .regular)
+//                    .foregroundColor(router.selectedTab == tab ? Color(hex: "E5C48F") : .gray)
+//            }
+//            .frame(maxWidth: .infinity)
+//            //.padding(.vertical, 6)
+//        }
+//        .onTapGesture {
+//            router.selectedTab = tab
+//            router.reset(in: tab)
+//        }
+//    }
+}
+
+struct TabItem: View {
+    let tab: AppTab
+    let isSelected: Bool
+    let onTap: () -> Void
+
+    var body: some View {
         VStack(spacing: 8) {
             // Indicator bar
             Rectangle()
-                .fill(router.selectedTab == tab ? Color(hex: "E5C48F") : .clear)
+                .fill(isSelected ? Color(hex: "E5C48F") : .clear)
                 .frame(height: 4)
-                .animation(.easeInOut(duration: 0.25), value: router.selectedTab)
+                .animation(.easeInOut(duration: 0.25), value: isSelected)
 
             VStack(spacing: 0) {
                 Image(systemName: tab.icon)
                     .font(.system(size: 18, weight: .medium))
-                    .foregroundColor(router.selectedTab == tab ? Color(hex: "E5C48F") : .gray)
+                    .foregroundColor(isSelected ? Color(hex: "E5C48F") : .gray)
 
                 Text(tab.title)
                     .font(.caption)
-                    .fontWeight(router.selectedTab == tab ? .semibold : .regular)
-                    .foregroundColor(router.selectedTab == tab ? Color(hex: "E5C48F") : .gray)
+                    .fontWeight(isSelected ? .semibold : .regular)
+                    .foregroundColor(isSelected ? Color(hex: "E5C48F") : .gray)
             }
             .frame(maxWidth: .infinity)
-            //.padding(.vertical, 6)
         }
-        .onTapGesture {
-            router.selectedTab = tab
-            router.reset(in: tab)
-        }
+        .contentShape(Rectangle())
+        .onTapGesture(perform: onTap)
     }
 }
+
