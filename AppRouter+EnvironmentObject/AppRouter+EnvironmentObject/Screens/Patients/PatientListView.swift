@@ -11,6 +11,7 @@ import SwiftUI
 // Supporting views used by PatientRoutes
 struct PatientListView: View {
     @EnvironmentObject private var router: AppRouter
+    
     var body: some View {
         List(1...10, id: \.self) { i in
 

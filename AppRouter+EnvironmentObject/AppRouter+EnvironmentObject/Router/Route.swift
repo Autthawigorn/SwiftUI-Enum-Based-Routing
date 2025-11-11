@@ -17,10 +17,10 @@ enum Route: Hashable {
     @ViewBuilder
     var destination: some View {
         switch self {
-        case .patients(let pr):
-            pr.destination
-        case .doctors(let dr):
-            dr.destination
+        case .patients(let patientRoutes):
+            patientRoutes.destination
+        case .doctors(let doctorRoutes):
+            doctorRoutes.destination
         }
     }
 }

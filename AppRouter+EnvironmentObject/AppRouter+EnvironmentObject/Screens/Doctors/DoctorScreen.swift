@@ -11,7 +11,6 @@ import SwiftUI
 struct DoctorScreen: View {
     @EnvironmentObject private var router: AppRouter
     
-    
     var body: some View {
         VStack(spacing: 16) {
             Text("Doctor Home")
