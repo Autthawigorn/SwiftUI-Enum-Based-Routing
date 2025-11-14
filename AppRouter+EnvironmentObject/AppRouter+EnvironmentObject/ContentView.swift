@@ -36,7 +36,7 @@ import SwiftUI
 //}
 
 struct ContentView: View {
-    @StateObject private var router = AppRouter()
+    @EnvironmentObject private var router: AppRouter
 
     var body: some View {
         VStack(spacing: 0) {
@@ -63,7 +63,7 @@ struct ContentView: View {
             CustomTabBar()
         }
         .background(Color.black.ignoresSafeArea())
-        .environmentObject(router)
+        //.environmentObject(router)
     }
 }
 
