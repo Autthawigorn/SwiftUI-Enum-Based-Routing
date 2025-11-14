@@ -48,7 +48,7 @@ struct TabItem: View {
             VStack(spacing: 0) {
                 Image(systemName: tab.icon)
                     .font(.system(size: 18, weight: .medium))
-                    .foregroundColor(isSelected ? Color(hex: "E5C48F") : .gray)
+                    .foregroundColor(isSelected ? Color.appAccent : .gray)
                 
                 Text(tab.title)
                     .font(.caption)
