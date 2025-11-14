@@ -7,46 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7DC57AC72EC380F00055398B /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57AC62EC380EF0055398B /* CustomTabbar.swift */; };
-		7DDD3C8F2EC0E2F90076A1E8 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C862EC0E2F90076A1E8 /* AppRouter.swift */; };
 		7DDD3C902EC0E2F90076A1E8 /* AppRouter_EnvironmentObjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C872EC0E2F90076A1E8 /* AppRouter_EnvironmentObjectApp.swift */; };
-		7DDD3C912EC0E2F90076A1E8 /* AppTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C882EC0E2F90076A1E8 /* AppTabs.swift */; };
 		7DDD3C922EC0E2F90076A1E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C8A2EC0E2F90076A1E8 /* ContentView.swift */; };
-		7DDD3C952EC0E2F90076A1E8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C8D2EC0E2F90076A1E8 /* Route.swift */; };
 		7DDD3C962EC0E2F90076A1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDD3C892EC0E2F90076A1E8 /* Assets.xcassets */; };
-		7DDD3C9A2EC0E9D20076A1E8 /* PatientRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C992EC0E9D20076A1E8 /* PatientRoutes.swift */; };
-		7DDD3C9C2EC0E9FC0076A1E8 /* DoctorRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3C9B2EC0E9FC0076A1E8 /* DoctorRoutes.swift */; };
 		7DDD3CA72EC0ED0F0076A1E8 /* PatientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3CA32EC0ED0F0076A1E8 /* PatientDetailView.swift */; };
 		7DDD3CA82EC0ED0F0076A1E8 /* PatientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3CA42EC0ED0F0076A1E8 /* PatientListView.swift */; };
 		7DDD3CA92EC0ED0F0076A1E8 /* PatientScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3CA52EC0ED0F0076A1E8 /* PatientScreen.swift */; };
 		7DDD3CAC2EC0ED1F0076A1E8 /* DoctorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3CAA2EC0ED1F0076A1E8 /* DoctorScreen.swift */; };
 		7DDD3CAE2EC0ED300076A1E8 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3CAD2EC0ED300076A1E8 /* DoctorListView.swift */; };
 		7DDD3CB02EC0ED4E0076A1E8 /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD3CAF2EC0ED4E0076A1E8 /* DoctorDetailView.swift */; };
+		C0B02A792EC6D6A70058E3A3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B02A782EC6D6A70058E3A3 /* LoadingView.swift */; };
+		C0B02A7B2EC6D6B10058E3A3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B02A7A2EC6D6B10058E3A3 /* ErrorView.swift */; };
+		C0B02A7D2EC6D6BA0058E3A3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B02A7C2EC6D6BA0058E3A3 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DC57AC62EC380EF0055398B /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		7DDD3C6C2EC0E07F0076A1E8 /* AppRouter+EnvironmentObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppRouter+EnvironmentObject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DDD3C862EC0E2F90076A1E8 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		7DDD3C872EC0E2F90076A1E8 /* AppRouter_EnvironmentObjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter_EnvironmentObjectApp.swift; sourceTree = "<group>"; };
-		7DDD3C882EC0E2F90076A1E8 /* AppTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabs.swift; sourceTree = "<group>"; };
 		7DDD3C892EC0E2F90076A1E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DDD3C8A2EC0E2F90076A1E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7DDD3C8D2EC0E2F90076A1E8 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		7DDD3C992EC0E9D20076A1E8 /* PatientRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRoutes.swift; sourceTree = "<group>"; };
-		7DDD3C9B2EC0E9FC0076A1E8 /* DoctorRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRoutes.swift; sourceTree = "<group>"; };
 		7DDD3CA32EC0ED0F0076A1E8 /* PatientDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailView.swift; sourceTree = "<group>"; };
 		7DDD3CA42EC0ED0F0076A1E8 /* PatientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListView.swift; sourceTree = "<group>"; };
 		7DDD3CA52EC0ED0F0076A1E8 /* PatientScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientScreen.swift; sourceTree = "<group>"; };
 		7DDD3CAA2EC0ED1F0076A1E8 /* DoctorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorScreen.swift; sourceTree = "<group>"; };
 		7DDD3CAD2EC0ED300076A1E8 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		7DDD3CAF2EC0ED4E0076A1E8 /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		C0B02A782EC6D6A70058E3A3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C0B02A7A2EC6D6B10058E3A3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		C0B02A7C2EC6D6BA0058E3A3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7DDD3CB22EC0EEEF0076A1E8 /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C0B02A672EC6D6110058E3A3 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0B02A692EC6D62F0058E3A3 /* Components */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C0B02A702EC6D63C0058E3A3 /* Router */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C0B02A762EC6D65C0058E3A3 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C0B02A8B2EC6D7EA0058E3A3 /* DesignSystem */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,10 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				7DDD3C892EC0E2F90076A1E8 /* Assets.xcassets */,
-				7DDD3CB22EC0EEEF0076A1E8 /* Core */,
-				7DDD3C982EC0E78C0076A1E8 /* Router */,
+				C0B02A702EC6D63C0058E3A3 /* Router */,
 				7DDD3C972EC0E4310076A1E8 /* Screens */,
-				7DDD3CB52EC0EF250076A1E8 /* Components */,
+				C0B02A762EC6D65C0058E3A3 /* ViewModels */,
+				C0B02A672EC6D6110058E3A3 /* Models */,
+				C0B02A692EC6D62F0058E3A3 /* Components */,
+				C0B02A8B2EC6D7EA0058E3A3 /* DesignSystem */,
+				7DDD3CB22EC0EEEF0076A1E8 /* Core */,
 				7DDD3C8A2EC0E2F90076A1E8 /* ContentView.swift */,
 				7DDD3C872EC0E2F90076A1E8 /* AppRouter_EnvironmentObjectApp.swift */,
 			);
@@ -97,20 +119,9 @@
 			children = (
 				7DDD3CAB2EC0ED1F0076A1E8 /* Doctors */,
 				7DDD3CA62EC0ED0F0076A1E8 /* Patients */,
+				C0B02A772EC6D67D0058E3A3 /* Shared */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		7DDD3C982EC0E78C0076A1E8 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				7DDD3C862EC0E2F90076A1E8 /* AppRouter.swift */,
-				7DDD3C8D2EC0E2F90076A1E8 /* Route.swift */,
-				7DDD3C992EC0E9D20076A1E8 /* PatientRoutes.swift */,
-				7DDD3C9B2EC0E9FC0076A1E8 /* DoctorRoutes.swift */,
-				7DDD3C882EC0E2F90076A1E8 /* AppTabs.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		7DDD3CA62EC0ED0F0076A1E8 /* Patients */ = {
@@ -133,12 +144,14 @@
 			path = Doctors;
 			sourceTree = "<group>";
 		};
-		7DDD3CB52EC0EF250076A1E8 /* Components */ = {
+		C0B02A772EC6D67D0058E3A3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7DC57AC62EC380EF0055398B /* CustomTabbar.swift */,
+				C0B02A782EC6D6A70058E3A3 /* LoadingView.swift */,
+				C0B02A7A2EC6D6B10058E3A3 /* ErrorView.swift */,
+				C0B02A7C2EC6D6BA0058E3A3 /* EmptyStateView.swift */,
 			);
-			path = Components;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +171,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				7DDD3CB22EC0EEEF0076A1E8 /* Core */,
+				C0B02A672EC6D6110058E3A3 /* Models */,
+				C0B02A692EC6D62F0058E3A3 /* Components */,
+				C0B02A702EC6D63C0058E3A3 /* Router */,
+				C0B02A762EC6D65C0058E3A3 /* ViewModels */,
+				C0B02A8B2EC6D7EA0058E3A3 /* DesignSystem */,
 			);
 			name = "AppRouter+EnvironmentObject";
 			packageProductDependencies = (
@@ -217,18 +235,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDD3CAC2EC0ED1F0076A1E8 /* DoctorScreen.swift in Sources */,
-				7DDD3C8F2EC0E2F90076A1E8 /* AppRouter.swift in Sources */,
-				7DC57AC72EC380F00055398B /* CustomTabbar.swift in Sources */,
+				C0B02A792EC6D6A70058E3A3 /* LoadingView.swift in Sources */,
 				7DDD3C902EC0E2F90076A1E8 /* AppRouter_EnvironmentObjectApp.swift in Sources */,
-				7DDD3C912EC0E2F90076A1E8 /* AppTabs.swift in Sources */,
 				7DDD3C922EC0E2F90076A1E8 /* ContentView.swift in Sources */,
 				7DDD3CA72EC0ED0F0076A1E8 /* PatientDetailView.swift in Sources */,
+				C0B02A7B2EC6D6B10058E3A3 /* ErrorView.swift in Sources */,
 				7DDD3CA82EC0ED0F0076A1E8 /* PatientListView.swift in Sources */,
 				7DDD3CA92EC0ED0F0076A1E8 /* PatientScreen.swift in Sources */,
-				7DDD3C9A2EC0E9D20076A1E8 /* PatientRoutes.swift in Sources */,
 				7DDD3CAE2EC0ED300076A1E8 /* DoctorListView.swift in Sources */,
-				7DDD3C952EC0E2F90076A1E8 /* Route.swift in Sources */,
-				7DDD3C9C2EC0E9FC0076A1E8 /* DoctorRoutes.swift in Sources */,
+				C0B02A7D2EC6D6BA0058E3A3 /* EmptyStateView.swift in Sources */,
 				7DDD3CB02EC0ED4E0076A1E8 /* DoctorDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
